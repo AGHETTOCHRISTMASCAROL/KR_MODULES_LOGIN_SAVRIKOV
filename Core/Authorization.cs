@@ -18,7 +18,6 @@ namespace _20101_Savrikov_authorization.Core
             if (db.User.Any(u => u.login == login && u.password == password))
             {
                 var user = db.User.Where(u => u.login == login && u.password == password).FirstOrDefault();
-                int idRole = user.Role.idRole;
                 MessageBox.Show($"Добро пожаловать! Ваша роль: {user.Role.title}");
             } 
             else
